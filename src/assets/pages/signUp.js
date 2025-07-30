@@ -1,9 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { Text, ImageBackground, TouchableOpacity, TextInput, View, Pressable } from 'react-native';
 
+// IMPORTANDO COMPONENTES
+import InputComp from '../components/InputComp';
+import TextComp from '../components/TextComp';
+
 // IMPORTANDO O ICONE
 import Foundation from '@expo/vector-icons/Foundation';
 
+// IMPOTANDO STYLES
 import { styles } from '../styles/styles';
 
 // IMPORTAÇÃO NATIVE
@@ -21,22 +26,23 @@ export default function signUp() {
       <Text style={styles.tituloSI}>CRIE SUA CONTA!</Text>
       <Text style={styles.subTituloSI}> Acesse novos conteúdos todos os dias!</Text>
 
-      <Text style={{ color: "#6ea2d0", bottom: 40, }}>Nome:</Text>
-      <TextInput style={styles.input}></TextInput>
+      <View>
+        <TextComp>Nome:</TextComp>
+        <InputComp textPlaceHolder={"Digite seu nome"} password={false} />
 
-      <Text style={{ color: "#6ea2d0", bottom: 40, }}>Email:</Text>
-      <TextInput style={styles.input}></TextInput>
+        <TextComp>Email:</TextComp>
+        <InputComp textPlaceHolder={"Digite seu email"} password={false} />
 
-      <Text style={{ color: "#6ea2d0", bottom: 40, }}>Senha:</Text>
-      <TextInput style={styles.input}></TextInput>
-
+        <TextComp>Senha:</TextComp>
+        <InputComp textPlaceHolder={"Digite sua senha"} password={true} />
+      </View>
       <TouchableOpacity style={styles.btnSI}>
         <Text style={styles.cadastroSI}>CRIAR CONTA</Text>
       </TouchableOpacity>
 
       <View style={styles.div}>
         <Text style={styles.details}>Já tem uma conta?</Text>
-        <Pressable onPress={() => Navigation.navigate("signIn")}><Text style={{ color: "white", fontWeigh: "bold" }}> Acesse aqui! </Text></Pressable>
+        <Pressable onPress={() => Navigation.navigate("signIn")}><Text style={{ color: "#345577", fontWeigh: "bold" }}> Acesse aqui! </Text></Pressable>
       </View>
 
     </ImageBackground>

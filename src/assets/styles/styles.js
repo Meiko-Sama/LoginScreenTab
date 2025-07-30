@@ -61,6 +61,10 @@ export const styles = StyleSheet.create({
     bottom: 100,
   },
 
+  inputs: {
+
+  },
+
   input: {
     backgroundColor: "rgba(221, 221, 221, 0.64)",
     width: 200,

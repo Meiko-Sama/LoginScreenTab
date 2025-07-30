@@ -1,5 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { Text, ImageBackground, TouchableOpacity, TextInput, View, Pressable } from 'react-native';
+import { Text, ImageBackground, TouchableOpacity, View, Pressable } from 'react-native';
+
+// IMPORTAÇÃO COMPONENTES
+import InputComp from '../components/InputComp';
+import TextComp from '../components/TextComp';
 
 // IMPORTANDO O ICONE
 import Foundation from '@expo/vector-icons/Foundation';
@@ -21,10 +25,17 @@ export default function signIn() {
       <Text style={styles.tituloSI}>ACESSE SUA CONTA!</Text>
       <Text style={styles.subTituloSI}> Bem vindo de volta usuário!</Text>
 
-      <Text style={{ color: "#6ea2d0", bottom: 40, }}>Email:</Text>
-      <TextInput style={styles.input}></TextInput>
-      <Text style={{ color: "#6ea2d0", bottom: 40, }}>Senha:</Text>
-      <TextInput style={styles.input}></TextInput>
+      <View style={styles.inputs}>
+        <TextComp>Email:</TextComp>
+        <InputComp textPlaceHolder={"Digite seu email"} password={false} />
+        <TextComp>Senha:</TextComp>
+        <InputComp textPlaceHolder={"Digite sua senha"} password={true} />
+
+
+        <Pressable style={{ position: 'absolute', right: -80, bottom: 7 }} onPress={() => { }}>
+          <Text style={{ color: "#6ea2d0", fontSize: 12 }}>Forgot your password?</Text>
+        </Pressable>
+      </View>
 
       <TouchableOpacity style={styles.btnSI}>
         <Text style={styles.cadastroSI}> ENTRAR </Text>
@@ -32,8 +43,9 @@ export default function signIn() {
 
       <View style={styles.div}>
         <Text style={styles.details}>Não tem uma conta ainda?</Text>
-        <Pressable onPress={() => Navigation.navigate("signUp")}><Text style={{ color: "white", fontWeigh: "bold" }}> Crie uma aqui! </Text></Pressable>
+        <Pressable onPress={() => Navigation.navigate("signUp")}><Text style={{ color: "#345577", fontWeigh: "bold" }}> Crie uma aqui! </Text></Pressable>
       </View>
+
 
     </ImageBackground>
   );
