@@ -1,11 +1,7 @@
-import { TextInput } from "react-native";
-import { styles } from "../styles/styles";
+import { Text } from "react-native"
 
-
-export default function TextComp({ text }) {
+export default function TextComp({ txt }) {
   return (
-    <Text
-      style={{ color: "#6ea2d0", bottom: 40, }}
-    />
+    <Text style={{ color: "#6ea2d0", bottom: 40, fontSize: 13, }}>{txt}</Text>
   )
 }

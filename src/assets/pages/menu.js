@@ -26,7 +26,7 @@ export default function Menu() {
 
       <View style={styles.div}>
         <Text style={styles.details}>Não tem uma conta ainda?</Text>
-        <Pressable onPress={() => Navigation.navigate("signUp")}><Text style={{ color: "#44704a", fontWeigh: "bold" }}> Crie uma aqui! </Text></Pressable>
+        <Pressable onPress={() => Navigation.navigate("signUp")}><Text style={{ color: "blue", fontWeigh: "bold" }}> Crie uma aqui! </Text></Pressable>
       </View>
 
     </ImageBackground>

@@ -20,30 +20,32 @@ export default function signIn() {
   return (
     <ImageBackground style={styles.containerSI} source={require("../images/sign.jpg")}>
 
-      <Foundation name="mountains" size={50} color="#345577" style={{ bottom: 190, right: 130 }} />
+      <Foundation name="mountains" size={70} color="#345577" style={{ bottom: 190, right: 130 }} />
 
       <Text style={styles.tituloSI}>ACESSE SUA CONTA!</Text>
       <Text style={styles.subTituloSI}> Bem vindo de volta usuário!</Text>
 
-      <View style={styles.inputs}>
-        <TextComp>Email:</TextComp>
+      <View style={styles.campo}>
+        <TextComp txt="Email:" />
         <InputComp textPlaceHolder={"Digite seu email"} password={false} />
-        <TextComp>Senha:</TextComp>
+        <TextComp txt="Senha:" />
         <InputComp textPlaceHolder={"Digite sua senha"} password={true} />
 
 
-        <Pressable style={{ position: 'absolute', right: -80, bottom: 7 }} onPress={() => { }}>
+        <Pressable style={{ position: 'absolute', right: -10, bottom: 15 }} onPress={() => { }}>
           <Text style={{ color: "#6ea2d0", fontSize: 12 }}>Forgot your password?</Text>
         </Pressable>
       </View>
 
-      <TouchableOpacity style={styles.btnSI}>
+      <TouchableOpacity onPress={() => Navigation.navigate("signUp")} style={styles.btnSI} >
         <Text style={styles.cadastroSI}> ENTRAR </Text>
       </TouchableOpacity>
 
       <View style={styles.div}>
         <Text style={styles.details}>Não tem uma conta ainda?</Text>
-        <Pressable onPress={() => Navigation.navigate("signUp")}><Text style={{ color: "#345577", fontWeigh: "bold" }}> Crie uma aqui! </Text></Pressable>
+        <Pressable onPress={() => Navigation.navigate("signUp")}>
+          <Text style={{ color: "#345577", fontWeigh: "bold" }}> Crie uma aqui! </Text>
+        </Pressable>
       </View>
 
 

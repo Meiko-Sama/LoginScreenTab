@@ -35,7 +35,7 @@ export const styles = StyleSheet.create({
   },
 
   login: {
-    color: "#629669",
+    color: "black",
     fontSize: 15,
   },
 
@@ -61,14 +61,14 @@ export const styles = StyleSheet.create({
     bottom: 100,
   },
 
-  inputs: {
-
+  campo: {
+    gap: 15,
   },
 
   input: {
     backgroundColor: "rgba(221, 221, 221, 0.64)",
-    width: 200,
-    height: 30,
+    width: 230,
+    height: 35,
     borderRadius: 30,
     bottom: 40,
   },
@@ -96,6 +96,11 @@ export const styles = StyleSheet.create({
   details: {
     color: "white",
 
+  },
+
+  details_singUP: {
+    bottom: 40,
+    color: "white"
   }
 
 });

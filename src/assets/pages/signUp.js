@@ -21,28 +21,29 @@ export default function signUp() {
   return (
     <ImageBackground style={styles.containerSI} source={require("../images/sign.jpg")}>
 
-      <Foundation name="mountains" size={50} color="#345577" style={{ bottom: 190, right: 130 }} />
+      <Foundation name="mountains" size={70} color="#345577" style={{ bottom: 140, right: 130 }} />
 
       <Text style={styles.tituloSI}>CRIE SUA CONTA!</Text>
       <Text style={styles.subTituloSI}> Acesse novos conteúdos todos os dias!</Text>
 
-      <View>
-        <TextComp>Nome:</TextComp>
+      <View style={styles.campo}>
+        <TextComp txt="Nome:" />
         <InputComp textPlaceHolder={"Digite seu nome"} password={false} />
 
-        <TextComp>Email:</TextComp>
+        <TextComp txt="Email:" />
         <InputComp textPlaceHolder={"Digite seu email"} password={false} />
 
-        <TextComp>Senha:</TextComp>
+        <TextComp txt="Senha:" />
         <InputComp textPlaceHolder={"Digite sua senha"} password={true} />
       </View>
+
       <TouchableOpacity style={styles.btnSI}>
         <Text style={styles.cadastroSI}>CRIAR CONTA</Text>
       </TouchableOpacity>
 
       <View style={styles.div}>
-        <Text style={styles.details}>Já tem uma conta?</Text>
-        <Pressable onPress={() => Navigation.navigate("signIn")}><Text style={{ color: "#345577", fontWeigh: "bold" }}> Acesse aqui! </Text></Pressable>
+        <Text style={styles.details_singUP}>Já tem uma conta?</Text>
+        <Pressable onPress={() => Navigation.navigate("signIn")}><Text style={{ color: "#345577", fontWeigh: "bold", bottom: 40 }}> Acesse aqui! </Text></Pressable>
       </View>
 
     </ImageBackground>
